@@ -7,7 +7,7 @@ def list_tasks():
 @app.route('/tasks', methods=['POST'])
 def create_task():
     data=request.json
-    task=add_task(data.get["task"])
+    task = add_task(data.get("task"))
     return jsonify({"task": task}), 201
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000)
